@@ -8,13 +8,10 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
     "lint": "eslint . --fix",
     "format": "prettier --write \"src/**/*\"",
     "validate": "yarn lint && yarn format",
-    "prepare": "yarn build",
-    "prepublishOnly": "yarn validate && yarn build",
-    "preversion": "yarn validate",
+    "build": "yarn validate && tsc",
     "version": "yarn format && git add -A src",
     "postversion": "git push && git push --tags && npm publish"
   },
