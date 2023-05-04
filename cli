@@ -31,6 +31,12 @@ if [ "$1" == "version" ]
     exit 0
 fi
 
+if [ "$1" == "publish" ]
+    then 
+        ./publish
+    exit 0
+fi
+
 ./app $*
 
 cd ../
