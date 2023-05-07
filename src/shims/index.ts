@@ -14,3 +14,9 @@ declare module "scaffold-generator" {
 
   export default Scaffold;
 }
+
+declare module "minimist" {
+  function minimist<TParams>(args: string[]): TParams;
+
+  export default minimist;
+}
