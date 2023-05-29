@@ -11,9 +11,8 @@
     "lint": "eslint . --fix",
     "format": "prettier --write \"src/**/*\"",
     "validate": "yarn lint && yarn format",
-    "build": "yarn validate && tsc",
-    "version": "yarn format && git add -A src",
-    "postversion": "git push && git push --tags && npm publish"
+    "build": "tsc",
+    "release": "yarn build && changeset publish"
   },
   "repository": {
     "type": "git",
@@ -26,6 +25,7 @@
   },
   "homepage": "https://github.com/henrotaym/scaffolding-utils#readme",
   "devDependencies": {
+    "@changesets/cli": "^2.26.1",
     "@types/mustache": "^4.2.2",
     "@types/node": "^18.16.3",
     "@types/readline-sync": "^1.4.4",
