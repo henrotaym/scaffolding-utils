@@ -18,6 +18,9 @@
     "type": "git",
     "url": "git+https://github.com/henrotaym/scaffolding-utils.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "Henrotay Mathieu <mathieu.henrotay@gmail.be>",
   "license": "MIT",
   "bugs": {
